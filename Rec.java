@@ -7,8 +7,6 @@ public class Rec {
 	 */
 	public static int numDigits(int n) {
 
-		// fill me in
-
 	}
 
 	/**
@@ -18,7 +16,13 @@ public class Rec {
 	 */
 	public static int sumDigits(int n) {
 
-		// fill me in
+		int total = 0;
+		total += n % 10;
+		n /= 10;
+		if (n == 0)
+			return total;
+		else
+			return total + sumDigits(n);
 
 	}
 
@@ -48,21 +52,22 @@ public class Rec {
 	}
 
 	public static void main(String[] args) {
-		// System.out.println(numDigits(123));
-		// System.out.println(numDigits(123456));
-		// System.out.println(numDigits(1));
-		// System.out.println(numDigits(0));
-		// System.out.println("-----------------");
-		// System.out.println(sumDigits(123));
-		// System.out.println(sumDigits(123456));
-		// System.out.println(sumDigits(1));
-		// System.out.println(sumDigits(0));
-		// System.out.println("-----------------");
+		System.out.println(numDigits(123));
+		System.out.println(numDigits(123456));
+		System.out.println(numDigits(1));
+		System.out.println(numDigits(0));
+		System.out.println("-----------------");
+		System.out.println(sumDigits(123));
+		System.out.println(sumDigits(123456));
+		System.out.println(sumDigits(1));
+		System.out.println(sumDigits(0));
+		System.out.println("-----------------");
 		System.out.println(removeChar("eawabbcceccddeeaaeeeee", 'e'));
 		System.out.println(removeChar("acacacacac", 'a'));
-		// System.out.println("-----------------");
-		// System.out.println(reverse("aaabbbaccabda"));
-		// System.out.println(reverse("abbcccdeaaa"));
-		// System.out.println(reverse("AMANAPLANACANALPANAMA"));
+		System.out.println("-----------------");
+		System.out.println(reverse("aaabbbaccabda"));
+		System.out.println(reverse("abbcccdeaaa"));
+		System.out.println(reverse("AMANAPLANACANALPANAMA"));
 	}
+
 }
