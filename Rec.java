@@ -6,7 +6,8 @@ public class Rec {
 	 * 4. Precondition: n >= 0.
 	 */
 	public static int numDigits(int n) {
-
+		// fill me in
+		return 0;
 	}
 
 	/**
@@ -15,7 +16,6 @@ public class Rec {
 	 * Precondition: n >= 0.
 	 */
 	public static int sumDigits(int n) {
-
 		int total = 0;
 		total += n % 10;
 		n /= 10;
@@ -23,7 +23,6 @@ public class Rec {
 			return total;
 		else
 			return total + sumDigits(n);
-
 	}
 
 	/**
@@ -38,7 +37,6 @@ public class Rec {
 			return removeChar(s.substring(1), to_remove_char);
 		else
 			return first + removeChar(s.substring(1), to_remove_char);
-
 	}
 
 	/**
@@ -46,9 +44,9 @@ public class Rec {
 	 * reverse("abcdefg") = "gfedcba".
 	 */
 	public static String reverse(String s) {
-
-		// fill me in
-
+		if (s.length() == 0)
+			return "";
+		return s.charAt(s.length() - 1) + reverse(s.substring(0, s.length() - 1));
 	}
 
 	public static void main(String[] args) {
@@ -69,5 +67,4 @@ public class Rec {
 		System.out.println(reverse("abbcccdeaaa"));
 		System.out.println(reverse("AMANAPLANACANALPANAMA"));
 	}
-
 }
