@@ -5,10 +5,13 @@ public class Rec {
 	 * numDigits(0) = 1, numDigits(3) = 1, numDigits(34) = 2. numDigits(1356) =
 	 * 4. Precondition: n >= 0.
 	 */
-	public static int numDigits(int n) {
-		// fill me in
-		return 0;
-	}
+    public static int numDigits(int n) {
+		if (n / 10 == 0)
+			return 1;
+		else
+			return numDigits(n / 10) + 1;
+
+    }
 
 	/**
 	 * = sum of the digits in the decimal representation of n. e.g. sumDigits(0)
