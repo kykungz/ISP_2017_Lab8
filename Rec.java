@@ -8,7 +8,11 @@ public class Rec {
     public static int numDigits(int n) {
 	
 	// fill me in
-	
+		if (n / 10 == 0)
+			return 1;
+		else
+			return numDigits(n / 10) + 1;
+
     }
 
     /** = sum of the digits in the decimal representation of n.
